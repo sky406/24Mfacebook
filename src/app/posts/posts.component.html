@@ -1,0 +1,14 @@
+<p>hi</p>
+<ul>
+  <ul *ngFor="let i of posts">
+    <div class="userdat">
+      <img src="{{i.userimg}}" alt="{{i.user}}" class="userimg">
+      <p class="username">{{i.user}}</p>
+    </div>
+    <h1 class="caption">{{i.caption}}</h1>
+    <div class="imgbox" *ngIf="i.image != ''"><img src="{{i.image}}" alt="" srcset=""></div>
+    <app-likebutton></app-likebutton>
+    <!-- TODO MAKE THE LIKE BUTTON WORK AND FIX THE CSS OR SCSS -->
+    <!-- <router-outlet></router-outlet> -->
+  </ul>
+</ul>

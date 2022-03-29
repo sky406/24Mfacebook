@@ -1,8 +1,13 @@
-<p>hi</p>
+
 <ul>
-  <ul *ngFor="let i of posts">
+  <li *ngFor="let i of posts" class="post">
     <div class="userdat">
-      <img src="{{i.userimg}}" alt="{{i.user}}" class="userimg">
+      <div *ngIf="i.userimg !='';else placeholderimg">
+        <img src="{{i.userimg}}" alt="{{i.user}}" class="userimg">
+      </div>
+      <!-- <div>
+        <img src="./download (4).jpg" alt="{{i.user}}" class="userimg">
+      </div> -->
       <p class="username">{{i.user}}</p>
     </div>
     <h1 class="caption">{{i.caption}}</h1>
@@ -10,5 +15,8 @@
     <app-likebutton></app-likebutton>
     <!-- TODO MAKE THE LIKE BUTTON WORK AND FIX THE CSS OR SCSS -->
     <!-- <router-outlet></router-outlet> -->
-  </ul>
+  </li>
 </ul>
+<ng-template #placeholderimg>
+  <img src="https://www.pngitem.com/pimgs/m/30-307416_profile-icon-png-image-free-download-searchpng-employee.png" alt="idk lol" class="userimg">
+</ng-template>

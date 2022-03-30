@@ -1,9 +1,10 @@
 
+
 <ul>
   <li *ngFor="let i of posts" class="post">
     <div class="userdat">
       <div *ngIf="i.userimg !='';else placeholderimg">
-        <img src="{{i.userimg}}" alt="{{i.user}}" class="userimg">
+        <img [src]="i.userimg" [alt]="i.user" class="userimg">
       </div>
       <!-- <div>
         <img src="./download (4).jpg" alt="{{i.user}}" class="userimg">
@@ -11,8 +12,8 @@
       <p class="username">{{i.user}}</p>
     </div>
     <h1 class="caption">{{i.caption}}</h1>
-    <div class="imgbox" *ngIf="i.image != ''"><img src="{{i.image}}" alt="" srcset=""></div>
-    <app-likebutton></app-likebutton>
+    <div class="imgbox" *ngIf="i.image != ''"><img [src]="i.image" alt="" srcset=""></div>
+    <app-likebutton [id]="i.id"></app-likebutton>
     <!-- TODO MAKE THE LIKE BUTTON WORK AND FIX THE CSS OR SCSS -->
     <!-- <router-outlet></router-outlet> -->
   </li>
@@ -20,3 +21,5 @@
 <ng-template #placeholderimg>
   <img src="https://www.pngitem.com/pimgs/m/30-307416_profile-icon-png-image-free-download-searchpng-employee.png" alt="idk lol" class="userimg">
 </ng-template>
+
+<!-- the sacuare brackets are property binding -->

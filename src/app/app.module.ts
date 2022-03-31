@@ -7,6 +7,7 @@ import { PostsComponent } from './posts/posts.component';
 // import { CheckedstarComponent } from './checkedstar/checkedstar.component';
 // import { UncheckedstarComponent } from './uncheckedstar/uncheckedstar.component';
 import { LikebuttonComponent } from './likebutton/likebutton.component';
+import { SimplikeComponent } from './simplike/simplike.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { LikebuttonComponent } from './likebutton/likebutton.component';
     PostsComponent,
     // CheckedstarComponent,
     // UncheckedstarComponent,
-    LikebuttonComponent
+    LikebuttonComponent,
+    SimplikeComponent
   ],
   imports: [
     BrowserModule,

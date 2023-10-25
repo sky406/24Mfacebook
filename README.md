@@ -1,3 +1,7 @@
+# Note
+this is a student project for an assignemt for understanding clinet server interactions
+
+
 # 24Mfacebook
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.0.
